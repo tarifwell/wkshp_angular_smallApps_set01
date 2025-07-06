@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="title-block">
+    <h1 class="text-center mt-5 text-light">Heroes</h1>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-3">
+      <input
+        type="text"
+        class="form-control m-1"
+        placeholder="name"
+        [(ngModel)]="hero.name"
+      />
+    </div>
+    <div class="col-3">
+      <input
+        type="text"
+        class="form-control m-1"
+        placeholder="power"
+        [(ngModel)]="hero.power"
+      />
+    </div>
+    <div class="col-3">
+      <input
+        type="text"
+        class="form-control m-1"
+        placeholder="image url"
+        [(ngModel)]="hero.imgUrl"
+      />
+    </div>
+    <div class="col-3">
+      <button (click)="addHero()" class="btn form-control m-1 text-light">
+        Create
+      </button>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-3" *ngFor="let hero of heroes">
+      <div
+        [ngClass]="{
+          'card p-1': true,
+          powerHigh: hero.power >= 20,
+          powerMedium: hero.power >= 10 && hero.power < 20,
+          powerLow: hero.power >= 5 && hero.power < 10,
+          powerVeryLow: hero.power < 5
+        }"
+        (touchstart)="swipe($event)"
+        (touchend)="swipe($event)"
+      >
+        <div class="card-image">
+          <img [src]="hero.imgUrl" alt="" class="img-fluid w-100" />
+        </div>
+        <div class="card-body">
+          <h2 class="card-title fs-3">{{ hero.name }}</h2>
+          <p class="card-text">Power {{ hero.power }}</p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

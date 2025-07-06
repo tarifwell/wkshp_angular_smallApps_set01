@@ -1,0 +1,85 @@
+.btn {
+  background-color: #ab21ff; /*#16c0c0;*/
+  color: #fff;
+}
+
+.card {
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swipe-left {
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.swipe-right {
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-image {
+  height: 150px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #666;
+  font-size: 14px;
+}
+
+.powerHigh {
+  background-color: #b00250;
+  color: #fff;
+}
+
+.powerMedium {
+  background-color: #00457d;
+  color: #ddd5d5;
+}
+
+.powerLow {
+  background-color: #03a780;
+  color: #f9ffca;
+}
+
+.powerVeryLow {
+  background-color: #d6f524;
+  color: #000000;
+}
+
+.img-resize {
+  width: 10%;
+  height: auto;
+}
