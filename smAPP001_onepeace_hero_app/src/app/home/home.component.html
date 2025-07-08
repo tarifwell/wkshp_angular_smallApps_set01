@@ -1,31 +1,91 @@
-<div class="container">
-  <div class="title-block">
-    <h1 class="text-center mt-5 text-light">Heroes</h1>
+<div class="container" id="top">
+  <!-- Title block -->
+  <div id="title-block" class="text-center mb-4">
+    <h1 class="display-4 text-light bg-dark py-3 rounded">One Peace Heroes</h1>
+    <!-- <h2 class="text-secondary mt-3">Choose a Hero or Enter New Data</h2>
+    <p class="text-muted">
+      Click on a hero's image to fill the form or use the form below to enter
+      new data
+    </p> -->
   </div>
 
+  <div class="container-fluid w-full">
+    <!-- Hero Section -->
+    <div class="hero-banner position-relative">
+      <div class="hero-overlay text-white text-center">
+        <h1 class="display-3 fw-bold">Welcome to Hero World</h1>
+        <p class="lead">Click a hero to see more or add your own!</p>
+      </div>
+    </div>
+
+    <!-- Select ribbon block -->
+    <div id="select-block" class="text-center mb-4">
+      <div
+        [ngClass]="{
+          'card p-1 slide-banner': true,
+          'swipe-left': swipeDirection === 'left',
+          'swipe-right': swipeDirection === 'right'
+        }"
+        (touchstart)="swipe($event)"
+        (touchend)="resetSwipe()"
+      >
+        <!-- Hero List Block -->
+        <div class="d-flex flex-wrap justify-content-start gap-3">
+          <div
+            *ngFor="let hero of heroes"
+            class="card hero-card text-center"
+            style="width: 120px; cursor: pointer"
+            (click)="selectHero(hero)"
+          >
+            <img
+              [src]="hero.imgUrl"
+              class="card-img-top img-fluid rounded-circle p-2"
+              alt="{{ hero.name }}"
+              style="height: 80px; object-fit: cover"
+            />
+            <div class="card-body p-2">
+              <h6 class="card-title mb-1">{{ hero.name }}</h6>
+              <small class="text-muted">{{ hero.power }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Form (add new hero) -->
   <div class="row mt-5">
     <div class="col-3">
       <input
         type="text"
+        id="name"
+        name="name"
         class="form-control m-1"
         placeholder="name"
         [(ngModel)]="hero.name"
+        required="true"
       />
     </div>
     <div class="col-3">
       <input
-        type="text"
+        type="number"
+        id="power"
+        name="power"
         class="form-control m-1"
         placeholder="power"
         [(ngModel)]="hero.power"
+        required="true"
       />
     </div>
     <div class="col-3">
       <input
-        type="text"
+        type="url"
+        id="imgUrl"
+        name="imgUrl"
         class="form-control m-1"
         placeholder="image url"
         [(ngModel)]="hero.imgUrl"
+        required="true"
       />
     </div>
     <div class="col-3">
@@ -35,6 +95,7 @@
     </div>
   </div>
 
+  <!-- Heroes List -->
   <div class="row mt-5">
     <div class="col-3" *ngFor="let hero of heroes">
       <div
@@ -59,4 +120,19 @@
       </div>
     </div>
   </div>
+
+  <div class="text-end mt-4">
+    <a href="#top" class="btn btn-outline-light btn-sm mt-2">Back to top</a>
+  </div>
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light text-center py-4 mt-1">
+    <div class="container">
+      <p class="mb-1">⚓ Made with ❤️ by an aspiring Hero</p>
+
+      <!-- <small class="text-muted" -->
+      <small class="text-center"
+        >© {{ currentYear }} Hero World | One Piece Tribute</small
+      >
+    </div>
+  </footer>
 </div>

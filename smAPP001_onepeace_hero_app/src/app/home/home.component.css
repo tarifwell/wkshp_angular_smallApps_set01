@@ -1,8 +1,50 @@
+/* Button Styles */
 .btn {
   background-color: #ab21ff; /*#16c0c0;*/
   color: #fff;
 }
 
+/* Image Styles */
+.img-resize {
+  width: 10%;
+  height: auto;
+}
+
+/* Hero Banner Styles */
+.hero-banner {
+  background-image: url("https://images3.alphacoders.com/714/714349.png");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* Select Ribbon Block Styles */
+#select-block {
+  margin-top: -80px; /* overlaps on top of hero section */
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+  background-image: url("https://wallpapers-clan.com/wp-content/uploads/2024/11/one-piece-monkey-d-luffy-grey-desktop-wallpaper-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card Styles */
 .card {
   margin: 20px;
   border: 1px solid #ddd;
@@ -21,29 +63,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.swipe-left {
-  transform: translateX(-100%);
-  transition: transform 0.2s ease-in-out;
-}
-
-.swipe-right {
-  transform: translateX(100%);
-  transition: transform 0.2s ease-in-out;
-}
-
-.card-image {
-  height: 150px;
-  overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* Card content Styles */
 .card-body {
   padding: 20px;
 }
@@ -59,6 +79,32 @@
   font-size: 14px;
 }
 
+/* Card Image Styles */
+.card-image {
+  height: 150px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card animation - Swipe Styles */
+.swipe-left {
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.swipe-right {
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Card Power styles */
 .powerHigh {
   background-color: #b00250;
   color: #fff;
@@ -79,7 +125,23 @@
   color: #000000;
 }
 
-.img-resize {
-  width: 10%;
-  height: auto;
+/* Footer Styles */
+.footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer small {
+  font-size: 0.9rem;
+  color: #bbb; /* #bbb;*/
+}
+
+.slide-banner {
+  background-color: rgba(22, 192, 192, 0.7);
 }

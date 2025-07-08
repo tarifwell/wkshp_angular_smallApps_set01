@@ -9,11 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  imagesAdresses = [
-    'https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729509_1280.jpg',
-    'https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729509_1280.jpg',
-    'https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729509_1280.jpg',
-  ];
+  currentYear = new Date().getFullYear();
 
   hero = {
     name: '',
@@ -71,6 +67,21 @@ export class HomeComponent {
 
   heroes: any[] = [...this.someInitialHeroes];
 
+  selectedHero = {
+    name: '',
+    power: '',
+    imgUrl: '',
+  };
+
+  selectHero(hero: any) {
+    this.hero = { ...hero };
+  }
+
+  onSubmit() {
+    // Logique pour soumettre ou sauvegarder le héros
+    console.log('Hero saved:', this.selectedHero);
+  }
+
   addHero() {
     this.heroes.push(this.hero);
     this.hero = {
@@ -78,10 +89,9 @@ export class HomeComponent {
       power: 0,
       imgUrl: '',
     };
-
-    console.log(this.heroes);
   }
 
+  // Card Animation [!!! to review]
   swipeDirection: string = 'left';
 
   constructor(private elementRef: ElementRef) {}
