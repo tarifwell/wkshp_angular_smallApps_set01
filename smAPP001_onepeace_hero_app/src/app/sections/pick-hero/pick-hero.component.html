@@ -1,0 +1,33 @@
+<!-- Select ribbon block -->
+<div id="select-block" class="text-center mb-4">
+  <div
+    [ngClass]="{
+      'card p-1 slide-banner': true,
+      'swipe-left': swipeDirection === 'left',
+      'swipe-right': swipeDirection === 'right'
+    }"
+    (touchstart)="swipe($event)"
+    (touchend)="resetSwipe()"
+  >
+    <!-- Hero List Block -->
+    <div class="d-flex flex-wrap justify-content-start gap-3">
+      <div
+        *ngFor="let hero of _serviceHeros.heroes"
+        class="card hero-card text-center"
+        style="width: 120px; cursor: pointer"
+        (click)="selectHero(hero)"
+      >
+        <img
+          [src]="hero.imgUrl"
+          class="card-img-top img-fluid rounded-circle p-2"
+          alt="{{ hero.name }}"
+          style="height: 80px; object-fit: cover"
+        />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">{{ hero.name }}</h6>
+          <small class="text-muted">{{ hero.power }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

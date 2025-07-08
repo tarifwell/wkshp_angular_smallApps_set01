@@ -1,0 +1,17 @@
+/* Hero Banner Styles */
+.hero-banner {
+  background-image: url("https://images3.alphacoders.com/714/714349.png");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
+  padding: 2rem;
+  border-radius: 1rem;
+}

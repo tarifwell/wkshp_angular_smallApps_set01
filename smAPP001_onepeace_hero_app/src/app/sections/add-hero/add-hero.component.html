@@ -1,1 +1,41 @@
-<p>add-hero works!</p>
+<!-- Hero Form (add new hero) -->
+<div class="row mt-5">
+  <div class="col-3">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="form-control m-1"
+      placeholder="name"
+      [(ngModel)]="_serviceHeros.hero.name"
+      required="true"
+    />
+  </div>
+  <div class="col-3">
+    <input
+      type="number"
+      id="power"
+      name="power"
+      class="form-control m-1"
+      placeholder="power"
+      [(ngModel)]="_serviceHeros.hero.power"
+      required="true"
+    />
+  </div>
+  <div class="col-3">
+    <input
+      type="url"
+      id="imgUrl"
+      name="imgUrl"
+      class="form-control m-1"
+      placeholder="image url"
+      [(ngModel)]="_serviceHeros.hero.imgUrl"
+      required="true"
+    />
+  </div>
+  <div class="col-3">
+    <button (click)="addHero()" class="btn form-control m-1 text-light">
+      Create
+    </button>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+/* Button Styles */
+.btn {
+  background-color: #ab21ff; /*#16c0c0;*/
+  color: #fff;
+}
+
+/* Image Styles */
+.img-resize {
+  width: 10%;
+  height: auto;
+}
+
+/* Footer Styles */
+.footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer small {
+  font-size: 0.9rem;
+  color: #bbb; /* #bbb;*/
+}
+
+.slide-banner {
+  background-color: rgba(22, 192, 192, 0.7);
+}

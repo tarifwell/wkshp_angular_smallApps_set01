@@ -1,0 +1,11 @@
+/* Button Styles */
+.btn {
+  background-color: #ab21ff; /*#16c0c0;*/
+  color: #fff;
+}
+
+/* Image Styles */
+.img-resize {
+  width: 10%;
+  height: auto;
+}
