@@ -15,3 +15,43 @@
   padding: 2rem;
   border-radius: 1rem;
 }
+
+/* Title Block Styles */
+#title-block {
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+}
+
+/* Navigation Bar Styles */
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  color: #ffc107 !important; /* Jaune Bootstrap */
+}
+
+/* Navigation Bar logo Styles */
+.navbar-brand img {
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+/* Style for active navigation link */
+.nav-link.active {
+  color: #ffc107 !important; /* Couleur active, par exemple jaune Bootstrap */
+  font-weight: bold;
+}
